@@ -1,0 +1,107 @@
+.lang-switcher {
+      position: fixed;
+      right: 50px;
+      bottom: 16px;
+      display: flex;
+      gap: 8px;
+      padding: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9999;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    /* Pojedynczy przycisk z flagą */
+    .lang-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,0.1);
+      background: #fff;
+      transition: transform 120ms ease, box-shadow 120ms ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .lang-btn:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.35);
+    }
+
+    .lang-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    }
+
+    .flag {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: block;
+    }
+
+    /* Prefers-reduced-motion: mniej animacji dla dostępności */
+    @media (prefers-reduced-motion: reduce) {
+      .lang-btn { transition: none; }
+      .lang-btn:hover { transform: none; }
+    }
+
+    /* Opcjonalna drobna animacja pojawienia */
+    .lang-switcher { opacity: 0; transform: translateY(8px); animation: in 220ms ease-out 120ms forwards; }
+    @keyframes in { to { opacity: 1; transform: translateY(0); } }
+    #cookie-banner {
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+  }
+
+  #cookie-banner p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+  }
+
+  #cookie-banner button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #settings-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+
+  #policy-btn {
+    background-color: #007bff;
+    color: white;
+  }
+
+  #accept-btn {
+    background-color: #28a745;
+    color: white;
+  }
+
+  #cookie-buttons {
+    display: flex;
+  }
